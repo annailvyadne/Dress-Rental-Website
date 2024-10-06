@@ -1,0 +1,45 @@
+<header class="flex justify-between items-center py-4 px-6 bg-white shadow-md">
+  <!-- Search Bar -->
+  <div class="flex items-center">
+    <form class="max-w-lg">
+      <div class="flex">
+        <button id="dropdown-button"
+          class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:ring-gray-100">
+          All categories
+          <svg class="w-2.5 h-2.5 ml-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
+        <div class="relative w-full">
+          <input type="search"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-e-lg border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Search..." />
+          <button type="submit"
+            class="absolute top-0 right-0 p-2.5 text-sm text-white bg-blue-700 rounded-e-lg hover:bg-blue-800 focus:ring-blue-300">
+            <i class="fa fa-search"></i>
+            <span class="sr-only">Search</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Logo -->
+  <div class="text-2xl font-bold">
+    <img src="assets/images/rental-logo.png" alt="logo" class="h-10">
+  </div>
+
+  <!-- Icons -->
+  <div class="flex space-x-6">
+    <a href="#"><i class="fa-regular fa-user text-gray-600"></i></a>
+    <a href="#"><i class="fa-regular fa-bag-shopping text-gray-600"></i></a>
+  </div>
+</header>
+
+<!-- Dropdown Categories -->
+<ul class="py-2 text-sm text-gray-700">
+  <li *ngFor="let category of categories">
+    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">{{ category }}</button>
+  </li>
+</ul>
